@@ -220,6 +220,7 @@ section#a-propos img {
     object-fit: cover;
     margin-right: 20px;
     order: 1;
+    border-radius: 5px;
 }
 
 section#a-propos .info {
