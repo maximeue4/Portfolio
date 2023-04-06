@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Détails du projet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <header>
+		<h1>Portfolio de Maxime Robin</h1>
+		<nav>
+			<ul>
+                <li><a href="index.html">Accueil</a></li>
+				<li><a href="index.html#experiences">Mes expériences</a></li>
+				<li><a href="index.html#loisirs">Mes loisirs</a></li>
+				<li><a href="index.html#a-propos">À propos</a></li>
+			</ul>
+		</nav>
+	</header>
+    <main>
+      <section id="projet">
+        <h1>Job été - Coopérative Jeunesse de Service</h1>
+        <p class="date-projet">2022</p>
+        <h2>Notre équipe</h2>
+        <img src="images/IMG_CJS.JPG">
+        <p class="description-projet">Une Coopérative Jeunesse de Services (CJS) est une entreprise coopérative éphémère créée et gérée par des jeunes de 12 à 17 ans pendant l'été, qui fournissent des services à leur communauté tout en apprenant des compétences entrepreneuriales et professionnelles.</p>
+        <h2>Création d'un flyer</h2>
+        <img src="images/flyer_cjs.PNG">
+        <p>En tant que directeur marketing, j'étais responsable de la promotion et de la vente de services, en élaborant des stratégies, en étudiant le marché, en gérant l'image de l'entreprise, en analysant les résultats des campagnes et en dirigeant une équipe.</p>
+        <h2>Réalisation</h2>
+        <ul>
+          <li>Utilisation du site Dolibarr (Création de devis / factures)</li>
+          <li>Permettre de nous faire connaitre (réseaux sociaux, porte à porte)</li>
+          <li>Cela m'a permis de découvrir le marketing, la finance et les ressources humaines</li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+		<p>Copyright © 2023 - Portfolio de Maxime Robin. Tous droits réservés.</p>
+	</footer>
+  </body>
+</html>
+
+<style>
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+main {
+  padding: 20px;
+}
+
+#projet {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#projet h1 {
+  font-size: 36px;
+  margin-top: 0;
+}
+
+#projet h2 {
+    margin-top: 20px;
+}
+
+#projet .date-projet {
+  font-size: 16px;
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: left;
+  opacity: 0.7;
+}
+
+#projet img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+#projet .description-projet {
+  font-size: 18px;
+  line-height: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /*overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;*/
+}
+
+/*#projet .description-projet:hover {
+  overflow: visible;
+  white-space: normal;
+}*/
+
+#projet .projet-image {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+}
+
+#projet ul{
+    margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  #projet {
+    flex-direction: column;
+  }
+
+  #projet .projet-image {
+    width: 100%;
+    height: 200px;
+  }
+
+  #projet .projet-text {
+    margin-top: 20px;
+  }
+}
+
+</style>
