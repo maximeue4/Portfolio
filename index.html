@@ -2,14 +2,25 @@
 <html>
 <head>
 	<title>Mon portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <div id="popup">
+        <p>
+            Participation aux 24h code le 4 et 5 mai.
+            <br>Où nous allons coder :
+            <br>- Un site web
+            <br>- Et une mini Intelligence artificielle
+            <br>Il n'y aura qu'une équipe gagnante (avec une récompense)
+        </p>
+        <button id="close-btn">Fermer</button>
+    </div>      
 	<header>
 		<h1>Portfolio de Maxime Robin</h1>
 		<nav>
 			<ul>
+                <li><a href="index.html">Accueil</a></li>
 				<li><a href="#experiences">Mes expériences</a></li>
 				<li><a href="#loisirs">Mes loisirs</a></li>
 				<li><a href="#a-propos">À propos</a></li>
@@ -21,35 +32,35 @@
 		<section id="experiences">
 			<ul>
 				<li>
-					<a href="#">
-                        <img src="https://raw.githubusercontent.com/maximeue4/Portfolio/main/images/IMG_CJS.jpg" alt="Projet 1">
+					<a href="cjs.html">
+                        <img src="images/IMG_CJS.JPG" alt="Projet 1">
 					    <h3>Job été - Coopérative Jeunesse de Service</h3>
                     </a>
-                    <p class="date-experience">2022</p>
+                    <p id="date" class="date-experience">2022</p>
 					<p>Propose différents types de services aux particuliers comme aux entreprises durant l'été.</p>
 				</li>
 				<li>
 					<a href="#">
-                        <img src="https://raw.githubusercontent.com/maximeue4/Portfolio/main/images/IMG_Oasis.jpg" alt="Projet 2">
+                        <img src="images/IMG_Oasis.JPG" alt="Projet 2">
 					    <h3>Job été - Nettoyage de résidences</h3>
                     </a>
-                    <p class="date-experience">2021 - 2022</p>
+                    <p id="date" class="date-experience">2021 - 2022</p>
 					<p>Nettoyage de villas tous les samedis pendant l'été dans la Résidence Oasis Parc.</p>
 				</li>
 				<li>
 					<a href="#">
-                        <img src="https://raw.githubusercontent.com/maximeue4/Portfolio/main/images/IMG_MSA.JPG" alt="Projet 3">
+                        <img src="images/IMG_MSA.JPG" alt="Projet 3">
 					    <h3>Stage - MSA Systèmes</h3>
                     </a>
-                    <p class="date-experience">2020</p>
+                    <p id="date" class="date-experience">2020</p>
 					<p>Fabricant de robots industriels, domestiques, médicaux et militaires.</p>
 				</li>
                 <li>
 					<a href="#">
-                        <img src="https://raw.githubusercontent.com/maximeue4/Portfolio/main/images/IMG_A3WEB.jpg" alt="Projet 3">
+                        <img src="images/IMG_A3WEB.JPG" alt="Projet 3">
 					    <h3>Stage - A3WEB</h3>
                     </a>
-                    <p class="date-experience">2019</p>
+                    <p id="date" class="date-experience">2019</p>
 					<p>Spécialisée dans la création de sites web et applications mobiles.</p>
 				</li>
 			</ul>
@@ -64,13 +75,13 @@
 		</section>
     <h2>À propos</h2>
 		<section id="a-propos">
-      <img src="https://raw.githubusercontent.com/maximeue4/Portfolio/main/images/IMG_0053.png">
-      <div class="info">
-        <h3>Maxime Robin</h3>
-        <p>Actuellement en classe de Terminale STI2D spécialité Système d'Information et Numérique au Lycée L'Hyrôme à Chemillé.<br>Titulaire du permis B.</p>
-        <a href="mailto: maxirobin81@gmail.com">maxirobin81@gmail.com</a>
-        <a href="https://www.instagram.com/aquizop/">Instagram</a>
-      </div>
+            <img src="images/IMG_0053.PNG">
+            <div class="info">
+                <h3>Maxime Robin</h3>
+                <p>Actuellement en classe de Terminale STI2D spécialité Système d'Information et Numérique au Lycée L'Hyrôme à Chemillé.<br>Titulaire du permis B.</p>
+                <a href="mailto: maxirobin81@gmail.com">maxirobin81@gmail.com</a>
+                <a href="https://www.instagram.com/aquizop/">Instagram</a>
+            </div>
 		</section>
 	</main>
 	<footer>
@@ -79,258 +90,44 @@
 </body>
 </html>
 
-<style>
+<script>
 
-/* Définition des styles de base */
+document.addEventListener("DOMContentLoaded", function() {
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+    // Sélectionne tous les éléments avec un attribut "id"
+    var elements = document.querySelectorAll("#date");
 
-body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    background-color: #f5f5f5;
-    color: #333;
-}
-
-header {
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
-}
-
-h1 {
-    font-size: 24px;
-    font-weight: normal;
-    margin-bottom: 10px;
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-nav li:last-child {
-    margin-right: 0;
-}
-
-nav a {
-    color: #333;
-    text-decoration: none;
-    padding: 5px;
-    border-bottom: 3px solid transparent;
-}
-
-nav a:hover {
-    border-bottom: 3px solid #333;
-}
-
-main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-/* Début projets */
-section#experiences ul{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-section#experiences {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-section#experiences li {
-    margin-bottom: 20px;
-    background-color: #fff;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
-    padding: 20px;
-    text-align: center;
-    list-style: none;
-    margin-right: 20px;
-}
-
-section#experiences a {
-    text-decoration: none;
-    color: #333;
-}
-
-section#experiences li h3:hover {
-    text-decoration: underline;
-}
-
-section#experiences li h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    text-decoration: none;
-    cursor: pointer;
-
-    width: 300px;
-    /* Les deux règles suivantes sont nécessaires pour text-overflow */
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-section#experiences li p {
-    font-size: 16px;
-    margin-bottom: 10px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    /*max-width: 100%;*/
-    width: 300px;
-}
-
-section#experiences li img {
-    width: 300px;
-    height: 262px;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-#experiences .date-experience {
-  font-size: 16px;
-  font-style: italic;
-  text-align: center;
-  opacity: 0.7; /* pour réduire l'opacité et la visibilité de la date */
-}
-
-/* Fin projets */
-
-section#loisirs {
-    background-color: #f5f5f5;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-section#loisirs h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-section#loisirs ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-section#loisirs li {
-    flex-basis: calc(25% - 20px);
-    margin: 10px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-section#loisirs li:hover {
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-    transform: translateY(-5px);
-}
-
-section#loisirs li h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-section#loisirs li p {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-/* Début a-propos */
-
-section#a-propos {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
-    text-align: center;
-
-    background-color: #fff;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
-}
-
-section#a-propos img {
-    width: 300px;
-    height: 262px;
-    object-fit: cover;
-    margin-right: 20px;
-    order: 1;
-}
-
-section#a-propos .info {
-    flex-basis: calc(50% - 20px);
-    margin-bottom: 20px;
-    order: 2;
-}
-
-@media screen and (max-width: 767px) {
-    section#a-propos {
-        flex-direction: column;
+    // Boucle sur la liste d'éléments et affiche leur ID dans la console
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].style.opacity = "0";
     }
-    section#a-propos img {
-        margin-right: 0;
-        margin-bottom: 20px;
-        order: 1;
+
+    document.getElementById("popup").style.display = "block";
+
+    // Ajoute une classe "popup-open" au corps de la page pour empêcher le défilement
+    document.body.classList.add("popup-open");
+
+    // Ajoute une règle CSS pour le corps de la page qui empêche le défilement
+    document.body.style.overflow = "hidden";
+});
+
+document.getElementById("close-btn").addEventListener("click", function() {
+
+    // Sélectionne tous les éléments avec un attribut "id"
+    var elements = document.querySelectorAll("#date");
+
+    // Boucle sur la liste d'éléments et affiche leur ID dans la console
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].style.opacity = "0.7";
     }
-    section#a-propos .info {
-        flex-basis: 100%;
-        order: 2;
-    }
-}
 
-section#a-propos h3 {
-    font-size: 24px;
-    margin-top: 0;
-    margin-bottom: 20px;
-}
+    document.getElementById("popup").style.display = "none";
 
-section#a-propos p {
-    font-size: 16px;
-    margin-bottom: 20px;
-    text-align: left;
-}
+    // Supprime la classe "popup-open" du corps de la page
+    document.body.classList.remove("popup-open");
 
-section#a-propos a {
-    display: inline-block;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #000;
-}
+    // Rétablit la valeur par défaut de la propriété "overflow" du corps de la page
+    document.body.style.overflow = "";
+});
 
-section#a-propos a:last-child {
-    margin-right: 0;
-}
-
-/* Fin a-propos */
-
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 40px;
-    text-align: center;
-}
-
-</style>
+</script>
